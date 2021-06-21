@@ -16,6 +16,8 @@
         <property name="show_sql">true</property>
 
 
+        <mapping class="homework4.entity.Car"/>
+        <mapping class="homework4.entity.Client"/>
         <mapping class="homework3.Animal"/>
     </session-factory>
 </hibernate-configuration>
