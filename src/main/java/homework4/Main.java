@@ -1,13 +1,16 @@
 package homework4;
 
 
-import homework3.Animal;
-import homework3.AnimalService;
+
 import homework4.dao.CarService;
 import homework4.dao.ClientService;
 import homework4.entity.Car;
 import homework4.entity.Client;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -44,6 +47,19 @@ public class Main {
         for (Client client1 : clients) {
             System.out.println(client1);
         }
+
+        SessionFactory sf = new Configuration()
+                .configure()
+                .buildSessionFactory();
+
+        Session session = sf.openSession();
+
+        List<Object[]> list = session.createQuery("select model, price from Сar").list();
+
+        for(Object[] arr: list) {
+            System.out.println(Arrays.toString(arr));
+        }
+        sf.close();
 
     }
 

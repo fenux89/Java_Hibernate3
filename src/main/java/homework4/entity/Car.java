@@ -12,8 +12,8 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String model;
-    private int price;
+    public String model;
+    public int price;
     @Transient
     private String mark;
     @Transient
