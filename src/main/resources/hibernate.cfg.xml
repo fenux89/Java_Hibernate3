@@ -19,5 +19,8 @@
         <mapping class="homework4.entity.Car"/>
         <mapping class="homework4.entity.Client"/>
         <mapping class="homework3.Animal"/>
+        <mapping class="homework6.entities.Animal"/>
+        <mapping class="homework6.entities.Aviary"/>
+        <mapping class="homework6.entities.Vet"/>
     </session-factory>
 </hibernate-configuration>

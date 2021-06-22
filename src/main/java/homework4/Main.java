@@ -54,7 +54,7 @@ public class Main {
 
         Session session = sf.openSession();
 
-        List<Object[]> list = session.createQuery("select model, price from Сar").list();
+        List<Object[]> list = session.createQuery("select model, price from Car").list();
 
         for(Object[] arr: list) {
             System.out.println(Arrays.toString(arr));
